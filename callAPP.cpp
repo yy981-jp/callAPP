@@ -74,13 +74,13 @@ int main(int argc, char* argv[]) {
     int windowHeight = ISize * rows; // 必要なウィンドウ高さ
 
     window->resize(windowWidth, windowHeight);  // ウィンドウサイズをボタンに合わせる
-
+*/
     // ウィンドウを画面中央に配置
     QRect screenGeometry = QApplication::primaryScreen()->availableGeometry();
-    int x = (screenGeometry.width() - window->width()*1.5) / 2;
+    int x = (screenGeometry.width() - window->width()/2) / 2;
     int y = (screenGeometry.height() - window->height()) / 2;
     window->move(x, y);  // ウィンドウを中央に配置
-*/
+
     window->show();
     return a.exec();
 }
